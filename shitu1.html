@@ -1,0 +1,193 @@
+
+	<!DOCTYPE html>      
+
+	<html lang="en">      
+
+	<head>      
+
+	<meta charset="UTF-8">      
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">      
+
+	<title>雅韵花事</title>      
+
+	<style>      
+
+	    body, html {      
+
+	        margin: 0;      
+
+	        padding: 0;      
+
+	        width: 100%;      
+
+	        height: 100vh; /* This will be adjusted later with a fixed height in pixels */  
+     
+
+	    }      
+
+	  
+
+	    .container {      
+
+	        position: relative;  
+
+	        width: 100%; /* Make the container full width */  
+
+	        height: 100vh; /* Temporary, will be overridden */  
+
+	        margin: 0 auto;  
+
+	        text-align: center;  
+
+	        overflow: hidden;  
+
+	        max-width: 640px; /* Set max-width to 640px */  
+
+	        max-height: 1008px; /* Set max-height to 1008px */  
+
+	        height: 100vh; /* Set fixed height */  
+
+	    }      
+
+	  
+
+	    .beijin {  
+
+	        margin: 0;  
+
+	        padding: 0;  
+
+	        width: 100%; /* Make background image full width */  
+
+	        height: 100%; /* Make background image full height */  
+
+	        object-fit: cover;/* Ensure the image covers the entire container while maintaining its aspect ratio */  
+			
+			height: 100vh;
+
+	    }  
+
+	  
+
+	    .back-button {      
+
+	        position: absolute;      
+
+	        top: 10px;      
+
+	        left: 10px;      
+
+	        width: 39px;      
+
+	        height: 41px;      
+
+	        background-image: url("返回键1.png");
+
+	        background-size: contain;      
+
+	        background-repeat: no-repeat;      
+
+	        cursor: pointer;      
+
+	        transition: background-color 0.2s ease;      
+
+	    }      
+
+	  
+
+	    .back-button:active {      
+
+	        background-color: rgba(0, 0, 0, 0.2);      
+
+	        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);      
+
+	    }      
+
+	  
+
+	    .zikuang-wrapper {    
+
+	        display: flex;    
+
+	        justify-content: space-between; /* 在项目之间分配空间 */    
+
+	        position: absolute;    
+
+	        top: 100px;   
+
+	        left: 50%; /* Changed from 60% to center the wrapper */  
+
+	        transform: translateX(-50%); /* 将整个flex容器向左移动自身宽度的一半，以实现居中 */    
+
+	        width: calc(100% - 160px); /* Assuming 3 boxes with some space, keep this responsive */    
+
+	    }    
+
+	  
+
+	    .zikuang {      
+
+	        width: 150px;      
+
+	        height: 200px;      
+
+	        background-size: contain;      
+
+	        background-repeat: no-repeat;      
+
+	        cursor: pointer;      
+
+	        transition: background-color 0.2s ease;      
+
+	    }    
+
+	  
+
+	    /* 为每个zikuang设置不同的背景图像 */    
+
+	    .zikuang:nth-child(1) {    
+
+	        background-image: url("字框1.png");    
+
+	    }    
+
+	    .zikuang:nth-child(2) {    
+
+	        background-image: url("字框2.png");    
+
+	    }    
+
+	    .zikuang:nth-child(3) {    
+
+	        background-image: url("字框3.png");    
+
+	    }    
+
+	</style>      
+
+	</head>      
+
+	<body>      
+
+	<div class="container">      
+
+	    <img class="beijin" src="背景图.jpg">  
+
+	    <div class="back-button" onclick="window.history.back();"></div>      
+
+	    <div class="zikuang-wrapper">    
+
+	        <div class="zikuang"></div>    
+
+	        <div class="zikuang"></div>    
+
+	        <div class="zikuang"></div>    
+
+	    </div>    
+
+	</div>      
+
+	</body>      
+
+	</html>
